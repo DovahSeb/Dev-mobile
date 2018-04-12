@@ -76,8 +76,6 @@ public class GameView extends SurfaceView implements Runnable {
             //to draw the frame
             draw();
             // Calculate the fps this frame
-            // We can then use the result to
-            // time animations and more.
             timeThisFrame = System.currentTimeMillis() - startFrameTime;
             if (timeThisFrame >= 1) {
                 fps = 1000 / timeThisFrame;
@@ -100,13 +98,13 @@ public class GameView extends SurfaceView implements Runnable {
             // Lock the canvas ready to draw
             canvas = surfaceHolder.lockCanvas();
 
-            // Draw the background color
+            // Couleur de fond
             canvas.drawColor(Color.argb(255, 26, 128, 182));
 
-            // Choose the brush color for drawing
+            // choisir la couleur
             paint.setColor(Color.argb(255, 255, 255, 255));
 
-            // Draw the paddle
+            // Dessiner la plateforme
             canvas.drawRect(platform.getRect(), paint);
 
         }
